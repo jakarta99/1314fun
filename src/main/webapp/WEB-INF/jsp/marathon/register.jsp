@@ -4,14 +4,18 @@
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" charset="utf-8">
 	
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+		<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+		<link rel='stylesheet' href='${pageContext.request.contextPath}/resources/css/awesome-bootstrap-checkbox.css'>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 		
 		<style>
 			@import url(http://fonts.googleapis.com/earlyaccess/notosanstc.css);
 			* {
+				font-size:18px;
+				line-height: 1.5;
 				font-family:'Noto Sans TC', sans-serif;
 			}
 		</style>
@@ -56,31 +60,34 @@
 				<div class="form-group">
 					<label for='category' class='control-label col-md-2 '>6. 參賽項目</label>
 					<div class="col-md-10">
-						<label class="radio-inline">
-					      <input type="radio" name="category" value='PRO'>競賽組
-					    </label>
-					    <label class="radio-inline">
-					      <input type="radio" name="category" value='HAPPY'>歡樂組(不用勾選第 7 項)
-					    </label>
+					
+						<div class="radio radio-primary radio-inline">
+							<input type="radio" id='categoryPRO' name="category" value='TEACHER'><label for='categoryPRO'>競賽組</label>
+						</div>
+						<div class="radio radio-primary radio-inline">
+							<input type="radio" id='categoryHAPPY' name="category" value='HAPPY'><label for='categoryHAPPY'>歡樂組(不用勾選第 7 項)</label>
+						</div>
+					
 					</div>
 				</div>
 				
 				<div class="form-group">
-					<label for='type' class='control-label col-md-2 '>7. 參加組別</label>
+					<label for='type' class='control-label col-md-2'>7. 參加組別</label>
 					<div class="col-md-10">
-						<label class="radio-inline">
-					      <input type="radio" name="type" value='TEACHER'>教職員工組
-					    </label>
-					    <label class="radio-inline">
-					      <input type="radio" name="type" value='STUDENT'>學生組
-					    </label>
-					    <label class="radio-inline">
-					      <input type="radio" name="type" value='ALUMNI'>校友組
-					    </label>
-					    <label class="radio-inline">
-					      <input type="radio" name="type" value='GUEST'>來賓組
-					    </label>
+						<div class="radio radio-primary radio-inline">
+							<input type="radio" id='typeTEACHER' name="type" value='TEACHER'><label for='typeTEACHER'>教職員工組</label>
+						</div>
+						<div class="radio radio-primary radio-inline">
+							<input type="radio" id='typeSTUDENT' name="type" value='STUDENT'><label for='typeSTUDENT'>學生組</label>
+						</div>
+						<div class="radio radio-primary radio-inline">						
+							<input type="radio" id='typeALUMNI' name="type" value='ALUMNI'><label for='typeALUMNI'>校友組</label>
+						</div>
+						<div class="radio radio-primary radio-inline">	
+							<input type="radio" id='typeGUEST' name="type" value='GUEST'><label for='typeGUEST'>來賓組</label>
+						</div>
 					</div>
+						
 				</div>
 				
 				<div class="form-group">
@@ -180,12 +187,38 @@
 				
 				<hr/>
 				
+				 <div class="col-md-4">
+                <fieldset>
+                    <legend>
+                        Disabled
+                    </legend>
+                    <p>
+                        Disabled state also supported.
+                    </p>
+                    <div class="radio radio-danger">
+                        <input type="radio" name="radio3" id="radio5" value="option1" disabled>
+                        <label for="radio5">
+                            Next
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <input type="radio" name="radio3" id="radio6" value="option2" checked disabled>
+                        <label for="radio6">
+                            One
+                        </label>
+                    </div>
+                </fieldset>
+            </div>
+				
 				<div class='col-md-12' style='text-align: center'>
 					<button type='button' class='btn btn-lg btn-primary'>報名</button>
 				</div>
 			</form>
 		</div>
-	
+		<br/>
+		<br/>
+		<br/>
+		<br/>
 	</body>
 
 
