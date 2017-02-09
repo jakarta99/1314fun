@@ -64,9 +64,9 @@
 			<img src='${pageContext.request.contextPath}/resources/images/1314-fun-sub.jpg' class="img-responsive">
 			<h1>路線說明</h1>
 			<h2>競賽組 3 km 路線</h2>
-			<a class='fancybox' rel='group' href='${pageContext.request.contextPath}/resources/images/map-pro-3000.png'><img src='${pageContext.request.contextPath}/resources/images/map-pro-3000.png' class="img-responsive"></a>
+			<a class='fancybox' rel='group' href='${pageContext.request.contextPath}/resources/images/map-pro-3000.png' title='競賽組 3 km 路線'><img src='${pageContext.request.contextPath}/resources/images/map-pro-3000.png' class="img-responsive"></a>
 			<h2>歡樂組 1.8 km 路線</h2>
-			<a class='fancybox' rel='group' href='${pageContext.request.contextPath}/resources/images/map-happy-1800.png'><img src='${pageContext.request.contextPath}/resources/images/map-happy-1800.png' class="img-responsive"></a>
+			<a class='fancybox' rel='group' href='${pageContext.request.contextPath}/resources/images/map-happy-1800.png' title='歡樂組 1.8 km 路線'><img src='${pageContext.request.contextPath}/resources/images/map-happy-1800.png' class="img-responsive"></a>
 		</div>	
 		<br/>
 		<br/>
