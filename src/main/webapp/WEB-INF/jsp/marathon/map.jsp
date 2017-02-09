@@ -20,6 +20,11 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 		
+		<!-- Add fancyBox -->
+		<link rel="stylesheet" href="${pageContext.request.contextPath}/vendors/fancybox/source/jquery.fancybox.css?v=2.1.6" type="text/css" media="screen" />
+		<script type="text/javascript" src="${pageContext.request.contextPath}/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.6"></script>
+		
+		
 		<style>
 			@import url(http://fonts.googleapis.com/earlyaccess/notosanstc.css);
 			* {
@@ -59,9 +64,9 @@
 			<img src='${pageContext.request.contextPath}/resources/images/1314-fun-sub.jpg' class="img-responsive">
 			<h1>路線說明</h1>
 			<h2>競賽組 3 km 路線</h2>
-			<img src='${pageContext.request.contextPath}/resources/images/map-pro-3000.png'>
+			<a class='fancybox' rel='group' href='${pageContext.request.contextPath}/resources/images/map-pro-3000.png'><img src='${pageContext.request.contextPath}/resources/images/map-pro-3000.png' class="img-responsive"></a>
 			<h2>歡樂組 1.8 km 路線</h2>
-			<img src='${pageContext.request.contextPath}/resources/images/map-happy-1800.png'>
+			<a class='fancybox' rel='group' href='${pageContext.request.contextPath}/resources/images/map-happy-1800.png'><img src='${pageContext.request.contextPath}/resources/images/map-happy-1800.png' class="img-responsive"></a>
 		</div>	
 		<br/>
 		<br/>
@@ -69,6 +74,11 @@
 		<br/>
 	</body>
 
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".fancybox").fancybox();
+	});
+</script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
