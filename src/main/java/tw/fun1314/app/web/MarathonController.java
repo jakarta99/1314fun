@@ -17,11 +17,41 @@ import tw.fun1314.app.entity.MarathonTeam;
 @RequestMapping("/marathon")
 public class MarathonController {
 
+	@RequestMapping(method = RequestMethod.GET)
+	public String indexPage(Model model) {
+		
+		return "/marathon/main";
+	}
+	
+	@RequestMapping(value = "/rule", method = RequestMethod.GET)
+	public String rulePage(Model model) {
+		
+		return "/marathon/rule";
+	}
+	
+	@RequestMapping(value = "/map", method = RequestMethod.GET)
+	public String mapPage(Model model) {
+		
+		return "/marathon/map";
+	}
+	
+	@RequestMapping(value = "/sponsor", method = RequestMethod.GET)
+	public String sponsorPage(Model model) {
+		
+		return "/marathon/sponsor";
+	}
+		
 	
 	@RequestMapping(value = "/register", method = RequestMethod.GET)
 	public String registerPage(Model model) {
 		
 		return "/marathon/register";
+	}
+	
+	@RequestMapping(value = "/record", method = RequestMethod.GET)
+	public String recordPage(Model model) {
+		
+		return "/marathon/record";
 	}
 	
 	
