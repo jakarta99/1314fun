@@ -17,9 +17,10 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
 		<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
 		<link rel='stylesheet' href='${pageContext.request.contextPath}/resources/css/awesome-bootstrap-checkbox.css'>
+		<link rel="stylesheet" href='https://cdn.jsdelivr.net/sweetalert2/6.3.8/sweetalert2.min.css'>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-		
+		<script src="https://cdn.jsdelivr.net/sweetalert2/6.3.8/sweetalert2.min.js"></script>
 		<style>
 			@import url(http://fonts.googleapis.com/earlyaccess/notosanstc.css);
 			* {
@@ -59,7 +60,7 @@
 			<img src='${pageContext.request.contextPath}/resources/images/1314-fun-sub.jpg' class="img-responsive">
 			<h1>報名網頁</h1>
 			<h2><font color='red'>Not released now</font></h2>
-			<form class="form-horizontal">
+			<form id='registerForm' class="form-horizontal">
 			
 				<div class="form-group">
 					
@@ -128,7 +129,7 @@
 					<div class="col-md-10">
 					
 						<div class="radio radio-primary radio-inline">
-							<input type="radio" id='categoryPRO' name="category" value='TEACHER'><label for='categoryPRO'>競賽組</label>
+							<input type="radio" id='categoryPRO' name="category" value='PRO'><label for='categoryPRO'>競賽組</label>
 						</div>
 						<div class="radio radio-primary radio-inline">
 							<input type="radio" id='categoryHAPPY' name="category" value='HAPPY'><label for='categoryHAPPY'>歡樂組</label>
@@ -184,43 +185,43 @@
 							</tr>
 							<tr style='background-color:#FFDDDD'>
 								<td>2</td>
-								<td><input class='form-control' id='memberNameW1' name='memberNameW1'/></td>
-								<td><input class='form-control' id='memberClassW1' name='memberClassW1'/></td>
+								<td><input class='form-control' id='memberNameW2' name='memberNameW2'/></td>
+								<td><input class='form-control' id='memberClassW2' name='memberClassW2'/></td>
 							</tr>
 							<tr style='background-color:#FFDDDD'>
 								<td>3</td>
-								<td><input class='form-control' id='memberNameW1' name='memberNameW1'/></td>
-								<td><input class='form-control' id='memberClassW1' name='memberClassW1'/></td>
+								<td><input class='form-control' id='memberNameW3' name='memberNameW3'/></td>
+								<td><input class='form-control' id='memberClassW3' name='memberClassW3'/></td>
 							</tr>
 							<tr style='background-color:#FFDDDD'>
 								<td>4</td>
-								<td><input class='form-control' id='memberNameW1' name='memberNameW1'/></td>
-								<td><input class='form-control' id='memberClassW1' name='memberClassW1'/></td>
+								<td><input class='form-control' id='memberNameW4' name='memberNameW4'/></td>
+								<td><input class='form-control' id='memberClassW4' name='memberClassW4'/></td>
 							</tr>
 							<tr style='background-color:#FFDDDD'>
 								<td>5</td>
-								<td><input class='form-control' id='memberNameW1' name='memberNameW1'/></td>
-								<td><input class='form-control' id='memberClassW1' name='memberClassW1'/></td>
+								<td><input class='form-control' id='memberNameW5' name='memberNameW5'/></td>
+								<td><input class='form-control' id='memberClassW5' name='memberClassW5'/></td>
 							</tr>
 							<tr style='background-color:#FFDDDD'>
 								<td>6</td>
-								<td><input class='form-control' id='memberNameW1' name='memberNameW1'/></td>
-								<td><input class='form-control' id='memberClassW1' name='memberClassW1'/></td>
+								<td><input class='form-control' id='memberNameW6' name='memberNameW6'/></td>
+								<td><input class='form-control' id='memberClassW6' name='memberClassW6'/></td>
 							</tr>
 							<tr style='background-color:#FFDDDD'>
 								<td>7</td>
-								<td><input class='form-control' id='memberNameW1' name='memberNameW1'/></td>
-								<td><input class='form-control' id='memberClassW1' name='memberClassW1'/></td>
+								<td><input class='form-control' id='memberNameW7' name='memberNameW7'/></td>
+								<td><input class='form-control' id='memberClassW7' name='memberClassW7'/></td>
 							</tr>
 							<tr style='background-color:#FFDDDD'>
 								<td>8</td>
-								<td><input class='form-control' id='memberNameW1' name='memberNameW1'/></td>
-								<td><input class='form-control' id='memberClassW1' name='memberClassW1'/></td>
+								<td><input class='form-control' id='memberNameW8' name='memberNameW8'/></td>
+								<td><input class='form-control' id='memberClassW8' name='memberClassW8'/></td>
 							</tr>
 							<tr style='background-color:#FFDDDD'>
 								<td>9</td>
-								<td><input class='form-control' id='memberNameW1' name='memberNameW1'/></td>
-								<td><input class='form-control' id='memberClassW1' name='memberClassW1'/></td>
+								<td><input class='form-control' id='memberNameW9' name='memberNameW9'/></td>
+								<td><input class='form-control' id='memberClassW9' name='memberClassW9'/></td>
 							</tr>
 							
 							<tr  style='background-color:#87CEFA'>
@@ -236,43 +237,43 @@
 							</tr>
 							<tr style='background-color:#AADDFF'>
 								<td>2</td>
-								<td><input class='form-control' id='memberNameM1' name='memberNameM1'/></td>
-								<td><input class='form-control' id='memberClassM1' name='memberClassM1'/></td>
+								<td><input class='form-control' id='memberNameM2' name='memberNameM2'/></td>
+								<td><input class='form-control' id='memberClassM2' name='memberClassM2'/></td>
 							</tr>
 							<tr style='background-color:#AADDFF'>
 								<td>3</td>
-								<td><input class='form-control' id='memberNameM1' name='memberNameM1'/></td>
-								<td><input class='form-control' id='memberClassM1' name='memberClassM1'/></td>
+								<td><input class='form-control' id='memberNameM3' name='memberNameM3'/></td>
+								<td><input class='form-control' id='memberClassM3' name='memberClassM3'/></td>
 							</tr>
 							<tr style='background-color:#AADDFF'>
 								<td>4</td>
-								<td><input class='form-control' id='memberNameM1' name='memberNameM1'/></td>
-								<td><input class='form-control' id='memberClassM1' name='memberClassM1'/></td>
+								<td><input class='form-control' id='memberNameM4' name='memberNameM4'/></td>
+								<td><input class='form-control' id='memberClassM4' name='memberClassM4'/></td>
 							</tr>
 							<tr style='background-color:#AADDFF'>
 								<td>5</td>
-								<td><input class='form-control' id='memberNameM1' name='memberNameM1'/></td>
-								<td><input class='form-control' id='memberClassM1' name='memberClassM1'/></td>
+								<td><input class='form-control' id='memberNameM5' name='memberNameM5'/></td>
+								<td><input class='form-control' id='memberClassM5' name='memberClassM5'/></td>
 							</tr>
 							<tr style='background-color:#AADDFF'>
 								<td>6</td>
-								<td><input class='form-control' id='memberNameM1' name='memberNameM1'/></td>
-								<td><input class='form-control' id='memberClassM1' name='memberClassM1'/></td>
+								<td><input class='form-control' id='memberNameM6' name='memberNameM6'/></td>
+								<td><input class='form-control' id='memberClassM6' name='memberClassM6'/></td>
 							</tr>
 							<tr style='background-color:#AADDFF'>
 								<td>7</td>
-								<td><input class='form-control' id='memberNameM1' name='memberNameM1'/></td>
-								<td><input class='form-control' id='memberClassM1' name='memberClassM1'/></td>
+								<td><input class='form-control' id='memberNameM7' name='memberNameM7'/></td>
+								<td><input class='form-control' id='memberClassM7' name='memberClassM7'/></td>
 							</tr>
 							<tr style='background-color:#AADDFF'>
 								<td>8</td>
-								<td><input class='form-control' id='memberNameM1' name='memberNameM1'/></td>
-								<td><input class='form-control' id='memberClassM1' name='memberClassM1'/></td>
+								<td><input class='form-control' id='memberNameM8' name='memberNameM8'/></td>
+								<td><input class='form-control' id='memberClassM8' name='memberClassM8'/></td>
 							</tr>
 							<tr style='background-color:#AADDFF'>
 								<td>9</td>
-								<td><input class='form-control' id='memberNameM1' name='memberNameM1'/></td>
-								<td><input class='form-control' id='memberClassM1' name='memberClassM1'/></td>
+								<td><input class='form-control' id='memberNameM9' name='memberNameM9'/></td>
+								<td><input class='form-control' id='memberClassM9' name='memberClassM9'/></td>
 							</tr>
 						
 						</table>
@@ -284,7 +285,7 @@
 				 
 				
 				<div class='col-md-12' style='text-align: center'>
-					<button type='button' class='btn btn-lg btn-primary'>報名</button>
+					<button id="registerBtn" type='button' class='btn btn-lg btn-primary'>報名</button>
 				</div>
 			</form>
 		</div>
@@ -293,7 +294,57 @@
 		<br/>
 		<br/>
 	</body>
+<script>
 
+$.fn.serializeObject = function() {
+	var o = {};
+	var a = this.serializeArray();
+	$.each(a, function() {
+		if (o[this.name]) {
+			if (!o[this.name].push) {
+				o[this.name] = [o[this.name]];
+			}
+			o[this.name].push(this.value || '');
+		} else {
+			o[this.name] = this.value || '';
+		}
+	});
+	return o;
+};
+
+$("#registerBtn").bind("click",function(){
+	$.ajax({
+		url:"${pageContext.request.contextPath}/marathon/register",
+		type:'post',
+		data:JSON.stringify( $("#registerForm").serializeObject() ),
+		dataType:'json',
+		contentType:"application/json; charset=utf-8",
+		success:function(result) {
+			if(result.id > 0) {
+				swal({
+					title: 'Good job!',
+					type: 'success',
+					html: '已經完成註冊程序，<br/>請等待校園馬工作人員完成最終對帳作業',
+					showCloseButton: true,
+				    allowOutsideClick: false,
+				    allowEscapeKey: false,
+				    onClose: function() {
+				    	document.location.href='${pageContext.request.contextPath}/marathon/';
+				    }
+				})
+			}
+		},
+		error:function(xhr, response, text) {
+			swal(
+					  'Error',
+					  '發生異常，如果持續無法註冊，請聯繫校園馬拉松大會工作人員',
+					  'danger'
+				);
+		}
+	});
+});
+
+</script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
