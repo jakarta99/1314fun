@@ -15,5 +15,10 @@ public class IndexController {
 	public String mainContent() {
 		return "main";
 	}
+	
+	@RequestMapping(value="/test")
+	public String test() {
+		return "test";
+	}
 
 }
