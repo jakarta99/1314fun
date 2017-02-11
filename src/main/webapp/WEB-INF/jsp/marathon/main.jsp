@@ -11,7 +11,13 @@
 		<meta name="description" content="2017 台大EMBA 校園馬拉松">
 		<meta name="keywords" content="2017 台大EMBA 校園馬拉松, 校園馬拉松, 台大, 台大EMBA, 1314fun, 1314 fun, 1314 fun 開跑">
 	
-		<title>2017 台大EMBA 校園馬拉松 - 1314 Fun 開跑 - 主頁</title>
+		<meta property="og:url"                content="${pageContext.request.contextPath}/marathon" />
+		<meta property="og:type"               content="article" />
+		<meta property="og:title"              content="2017 台大EMBA 校園馬拉松 - 1314 Fun 開跑 - 最新消息" />
+		<meta property="og:description"        content="最新消息" />
+		<meta property="og:image"              content="${pageContext.request.contextPath}/resources/images/1314-fun.jpg" />		
+	
+		<title>2017 台大EMBA 校園馬拉松 - 1314 Fun 開跑 - 最新消息</title>
 	
 		<link rel="stylesheet" href="${pageContext.request.contextPath}/vendors/bootstrap-3.3.7-dist/css/bootstrap.min.css">
 		<link rel="stylesheet" href="${pageContext.request.contextPath}/vendors/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css">
