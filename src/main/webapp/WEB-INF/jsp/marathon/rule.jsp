@@ -9,16 +9,16 @@
 		<meta name="robots" content="index, follow" />
 		<meta name="revisit-after" content="1 days">
 		<meta name="description" content="2017 台大EMBA 校園馬拉松">
-		<meta name="keywords" content="校園馬拉松, 台大, 台大EMBA, 1314fun, 1314 fun, 1314 fun 開跑">
+		<meta name="keywords" content="2017 台大EMBA 校園馬拉松, 校園馬拉松, 台大, 台大EMBA, 1314fun, 1314 fun, 1314 fun 開跑">
 	
 		<title>2017 台大EMBA 校園馬拉松 - 1314 Fun 開跑 - 競賽規章</title>
 		
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
-		<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+		<link rel="stylesheet" href="${pageContext.request.contextPath}/vendors/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="${pageContext.request.contextPath}/vendors/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css">
+		<link rel='stylesheet' href='${pageContext.request.contextPath}/vendors/font-awesome-4.7.0/css/font-awesome.min.css'>
 		<link rel='stylesheet' href='${pageContext.request.contextPath}/resources/css/awesome-bootstrap-checkbox.css'>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<script src="${pageContext.request.contextPath}/vendors/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 		
 		<style>
 			@import url(http://fonts.googleapis.com/earlyaccess/notosanstc.css);
@@ -44,7 +44,7 @@
 	        </div>
 	        <div id="navbar" class="navbar-collapse collapse">
 	          <ul class="nav navbar-nav">
-              <li><a href="${pageContext.request.contextPath}/marathon/">活動首頁</a></li>
+              <li><a href="${pageContext.request.contextPath}/marathon/">最新消息</a></li>
               <li class="active"><a href="${pageContext.request.contextPath}/marathon/rule">賽事規章</a></li>
               <li><a href="${pageContext.request.contextPath}/marathon/map">路線說明</a></li>
               <li><a href="${pageContext.request.contextPath}/marathon/register">報名資訊</a></li>

@@ -9,19 +9,20 @@
 		<meta name="robots" content="index, follow" />
 		<meta name="revisit-after" content="1 days">
 		<meta name="description" content="2017 台大EMBA 校園馬拉松">
-		<meta name="keywords" content="校園馬拉松, 台大, 台大EMBA, 1314fun, 1314 fun, 1314 fun 開跑">
+		<meta name="keywords" content="2017 台大EMBA 校園馬拉松, 校園馬拉松, 台大, 台大EMBA, 1314fun, 1314 fun, 1314 fun 開跑">
 	
 		<title>2017 台大EMBA 校園馬拉松 - 1314 Fun 開跑 - 報名資訊</title>
 	
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
-		<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+		<link rel="stylesheet" href="${pageContext.request.contextPath}/vendors/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="${pageContext.request.contextPath}/vendors/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css">
+		<link rel='stylesheet' href='${pageContext.request.contextPath}/vendors/font-awesome-4.7.0/css/font-awesome.min.css'>
 		<link rel='stylesheet' href='${pageContext.request.contextPath}/resources/css/awesome-bootstrap-checkbox.css'>
-		<link rel="stylesheet" href='https://cdn.jsdelivr.net/sweetalert2/6.3.8/sweetalert2.min.css'>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href='https://cdn.jsdelivr.net/sweetalert2/6.3.8/sweetalert2.min.css'>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="${pageContext.request.contextPath}/vendors/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/sweetalert2/6.3.8/sweetalert2.min.js"></script>
-		<%--<script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script> --%>
 		<script src="${pageContext.request.contextPath}/resources/js/jqBootstrapValidation2.min.js"></script>
 		<style>
 			@import url(http://fonts.googleapis.com/earlyaccess/notosanstc.css);
@@ -50,7 +51,7 @@
 	        </div>
 	        <div id="navbar" class="navbar-collapse collapse">
 	          <ul class="nav navbar-nav">
-              <li><a href="${pageContext.request.contextPath}/marathon/">活動首頁</a></li>
+              <li><a href="${pageContext.request.contextPath}/marathon/">最新消息</a></li>
               <li><a href="${pageContext.request.contextPath}/marathon/rule">賽事規章</a></li>
               <li><a href="${pageContext.request.contextPath}/marathon/map">路線說明</a></li>
               <li class="active"><a href="${pageContext.request.contextPath}/marathon/register">報名資訊</a></li>
@@ -87,18 +88,18 @@
 					<div class="col-md-10">
 						<div class='col-md-4 form-group'>
 							<label for="payAmount">轉帳金額</label>
-							<input type='number' class='form-control' id='payAmount' name='payAmount' placeholder='請輸入轉帳金額' required>
+							<input type='number' class='form-control' id='payAmount' name='payAmount' placeholder='請輸入轉帳金額' required data-validation-required-message="請輸入轉帳金額" data-validation-number-message="請輸入數字格式">
 							<p class="help-block"></p>
 							
 						</div>
 						<div class='col-md-4 form-group'>
 							<label for="payName">轉帳戶名</label>
-							<input type='text' class='form-control' id='payName' name='payName' placeholder='請輸入轉帳戶名' required>
+							<input type='text' class='form-control' id='payName' name='payName' placeholder='請輸入轉帳戶名' required data-validation-required-message="請輸入轉帳戶名">
 							<p class="help-block"></p>
 						</div>	
 						<div class='col-md-4 form-group'>
 							<label for="payAccount">帳號末五碼</label>
-							<input type='text' class='form-control' id='payAccount' name='payAccount' placeholder='請輸入帳號末五碼' required>
+							<input type='number' class='form-control' id='payAccount' name='payAccount' placeholder='請輸入帳號末五碼' required data-validation-required-message="請輸入帳號末五碼" data-validation-number-message="請輸入數字格式">
 							<p class="help-block"></p>
 						</div>
 					</div>
@@ -108,62 +109,63 @@
 				<div class="form-group">
 					<label for='teamName' class='control-label col-sm-2 '>1. 隊名</label>
 					<div class="col-md-6">
-						<input type='text' class='form-control' id='teamName' name='teamName' placeholder='請輸入隊伍名稱' required>
+						<input type='text' class='form-control' id='teamName' name='teamName' placeholder='請輸入隊伍名稱' required data-validation-required-message="請輸入隊伍名稱">
 					</div>
 					<div class="col-md-4 help-block"></div>
 				</div>
 				<div class="form-group">
 					<label for='leaderName' class='control-label col-md-2 '>2. 隊長</label>
 					<div class="col-md-6">
-						<input type='text' class='form-control ' id='leaderName' name='leaderName' placeholder='請輸入隊長姓名' required>
+						<input type='text' class='form-control ' id='leaderName' name='leaderName' placeholder='請輸入隊長姓名' required data-validation-required-message="請輸入隊長姓名">
 					</div>
 					<div class="col-md-4 help-block"></div>
 				</div>
 				<div class="form-group">
 					<label for='address' class='control-label col-md-2 '>3. 聯絡地址</label>
 					<div class="col-md-6">
-						<input type='text' class='form-control' id='address' name='address' placeholder='請輸入聯絡地址' required>
+						<input type='text' class='form-control' id='address' name='address' placeholder='請輸入聯絡地址' required data-validation-required-message="請輸入聯絡地址">
 					</div>
 					<div class="col-md-4 help-block"></div>
 				</div>
 				<div class="form-group">
 					<label for='phone' class='control-label col-md-2 '>4. 聯絡電話</label>
 					<div class="col-md-6">
-						<input type='text' class='form-control' id='phone' name='phone' placeholder='請輸入聯絡電話' required>
+						<input type='text' class='form-control' id='phone' name='phone' placeholder='請輸入聯絡電話' required data-validation-required-message="請輸入聯絡電話">
 					</div>
 					<div class="col-md-4 help-block"></div>
 				</div>
 				<div class="form-group">
 					<label for='email' class='control-label col-md-2 '>5. 聯絡Email</label>
 					<div class="col-md-6">
-						<input type='email' class='form-control' id='email' name='email' placeholder='請輸入聯絡 Email' required >
+						<input type='email' class='form-control' id='email' name='email' placeholder='請輸入聯絡 Email' required data-validation-required-message="請輸入聯絡 Email" data-validation-email-message="請輸入正確的Email格式">
 					</div>
 					<div class="col-md-4 help-block"></div>
 				</div>
 				<div class="form-group">
 					<label for='category' class='control-label col-md-2 '>6. 參賽項目</label>
-					<div class="col-md-10">
+					<div class="col-md-6">
 					
 						<div class="radio radio-primary radio-inline">
-							<input type="radio" id='categoryPRO' name="category" value='PRO' checked><label for='categoryPRO'>競賽組</label>
+							<input type="radio" id='categoryPRO' name="category" value='PRO' minchecked="1"  data-validation-minchecked-message="請選擇參賽項目"><label for='categoryPRO'>競賽組</label>
 						</div>
 						<div class="radio radio-primary radio-inline">
 							<input type="radio" id='categoryHAPPY' name="category" value='HAPPY'><label for='categoryHAPPY'>歡樂組</label>
 						</div>
 					
 					</div>
+					<div class="col-md-4 help-block"></div>
 				</div>
 				
 				
 				
 				<div class="form-group">
 					<label for='type' class='control-label col-md-2'>7. 參加組別</label>
-					<div class="col-md-10">
+					<div class="col-md-6">
 						<div class="radio radio-primary radio-inline">
-							<input type="radio" id='typeTEACHER' name="type" value='TEACHER'><label for='typeTEACHER'>教職員工組</label>
+							<input type="radio" id='typeTEACHER' name="type" value='TEACHER'  minchecked="1"  data-validation-minchecked-message="請選擇參加組別"><label for='typeTEACHER'>教職員工組</label>
 						</div>
 						<div class="radio radio-primary radio-inline">
-							<input type="radio" id='typeSTUDENT' name="type" value='STUDENT' checked><label for='typeSTUDENT'>學生組</label>
+							<input type="radio" id='typeSTUDENT' name="type" value='STUDENT'><label for='typeSTUDENT'>學生組</label>
 						</div>
 						<div class="radio radio-primary radio-inline">						
 							<input type="radio" id='typeALUMNI' name="type" value='ALUMNI'><label for='typeALUMNI'>校友組</label>
@@ -172,6 +174,7 @@
 							<input type="radio" id='typeGUEST' name="type" value='GUEST'><label for='typeGUEST'>來賓組</label>
 						</div>
 					</div>
+					<div class="col-md-4 help-block"></div>
 						
 				</div>
 				<div class="form-group">
@@ -180,9 +183,11 @@
 					<label for='type' class='control-label col-md-2 '>8. 隊員名單</label>
 					
 					<div class="col-md-10">
-						<div class='text-danger col-md-12'>
+						<div class='text-info col-md-12'>
+						<h5>
 						競賽組每隊可報名女 3 名與男 6 名，出賽女 2 名與男 5 名共 7 名選手。<br/>
 						歡樂組每隊報名男女不拘，每隊可報名 9 名，實際出賽 7 名選手。
+						</h5>
 						<br/>
 						</div>
 						<table class='table'>
@@ -316,6 +321,7 @@ $(function () {
             {
                 preventSubmit: true,
                 submitError: function($form, event, errors) {
+                	$('html,body').scrollTop(700);
                 	swal({
             			title: 'Oooooooooops!',
             			type: 'error',
@@ -326,7 +332,6 @@ $(function () {
             		});
                 },
                 submitSuccess: function($form, event) {
-                    alert("OK");
                     event.preventDefault();
                     $.ajax({
                 		url:"${pageContext.request.contextPath}/marathon/register",
@@ -335,11 +340,11 @@ $(function () {
                 		dataType:'json',
                 		contentType:"application/json; charset=utf-8",
                 		success:function(result) {
-                			if(result.id > 0) {
+                			if(result.isMessageEmpty) {
                 				swal({
                 					title: 'Good job!',
                 					type: 'success',
-                					html: '已經完成註冊程序，<br/>請等待校園馬工作人員完成最終對帳作業<br/><font color="red">** 別忘了交回切結書哦，沒有填切結書是不能參加比賽的 **</font>',
+                					html: '已經完成註冊程序，<br/>請等待校園馬工作人員完成最終對帳作業<br/><font color="red"><b>別忘了交回切結書哦，沒有填切結書是不能參加比賽的</b></font>',
                 					showCloseButton: true,
                 				    allowOutsideClick: false,
                 				    allowEscapeKey: false,
@@ -347,6 +352,15 @@ $(function () {
                 				    	document.location.href='${pageContext.request.contextPath}/marathon/';
                 				    }
                 				})
+                			} else {
+                				swal({
+                    				title: 'Oooooooooops!',
+                    				type: 'error',
+                    				html: '發生'+result.messages[0]+'，<br/>如果持續無法註冊，請聯繫校園馬拉松大會工作人員',
+                    				showCloseButton: true,
+                    			    allowOutsideClick: false,
+                    			    allowEscapeKey: false
+                    			});
                 			}
                 		},
                 		error:function(xhr, response, text) {

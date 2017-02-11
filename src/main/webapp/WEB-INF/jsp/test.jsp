@@ -121,7 +121,6 @@ $(function () {
             		});
                 },
                 submitSuccess: function($form, event) {
-                    alert("OK");
                     //event.preventDefault();
                     $.ajax({
                 		url:"${pageContext.request.contextPath}/marathon/register",
