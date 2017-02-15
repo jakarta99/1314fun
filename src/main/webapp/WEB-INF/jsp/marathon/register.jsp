@@ -11,11 +11,11 @@
 		<meta name="description" content="2017 台大EMBA 校園馬拉松">
 		<meta name="keywords" content="2017 台大EMBA 校園馬拉松, 校園馬拉松, 台大, 台大EMBA, 1314fun, 1314 fun, 1314 fun 開跑">
 		
-		<meta property="og:url"                content="${pageContext.request.contextPath}/marathon" />
+		<meta property="og:url"                content="http://1314fun.tw/marathon/register" />
 		<meta property="og:type"               content="article" />
 		<meta property="og:title"              content="2017 台大EMBA 校園馬拉松 - 1314 Fun 開跑 - 報名資訊" />
 		<meta property="og:description"        content="報名資訊" />
-		<meta property="og:image"              content="${pageContext.request.contextPath}/resources/images/1314-fun.jpg" />
+		<meta property="og:image"              content="http://1314fun.tw/resources/images/1314-fun.jpg" />
 	
 		<title>2017 台大EMBA 校園馬拉松 - 1314 Fun 開跑 - 報名資訊</title>
 	
@@ -71,7 +71,7 @@
 		<div class="container">
 			<img src='${pageContext.request.contextPath}/resources/images/1314-fun-sub.jpg' class="img-responsive">
 			<h1>報名網頁</h1>
-			<h2><font color='red'>Not released now</font></h2>
+			
 			<form id='registerForm' class="form-horizontal" novalidate>
 			
 				<div class="form-group">
@@ -85,7 +85,15 @@
 						帳號：<b>301-68-168168</b>  <br/>
 						戶名：<b>林佩怡</b>
 						<br/><br/>
-						<font color='red'>** 別忘了交回切結書哦，沒有填切結書是不能參加比賽的 **</font>
+						<font color='red'>
+						報名後各組領隊別忘了收齊切結書，<br/>
+						並於4/10參加技術會議時繳交給主辦單位，<br/>
+						沒有切結書是不能參加比賽的呦 !!<br/><br/>
+						</font>
+						<div>
+							<a href='${pageContext.request.contextPath}/resources/file/2017NTUEMBA-Marathon-Rule.pdf' class='btn btn-primary btn-lg' download>競賽規則</a>
+							<a href='${pageContext.request.contextPath}/resources/file/2017NTUEMBA-Marathon-Affidavit.pdf' class='btn btn-warning btn-lg' download>切結書</a>
+						</div>
 						<br/><br/>
 						</div>
 					</div>
@@ -168,10 +176,7 @@
 					<label for='type' class='control-label col-md-2'>7. 參加組別</label>
 					<div class="col-md-6">
 						<div class="radio radio-primary radio-inline">
-							<input type="radio" id='typeTEACHER' name="type" value='TEACHER'  minchecked="1"  data-validation-minchecked-message="請選擇參加組別"><label for='typeTEACHER'>教職員工組</label>
-						</div>
-						<div class="radio radio-primary radio-inline">
-							<input type="radio" id='typeSTUDENT' name="type" value='STUDENT'><label for='typeSTUDENT'>學生組</label>
+							<input type="radio" id='typeTEACHER' name="type" value='TEACHER'  minchecked="1"  data-validation-minchecked-message="請選擇參加組別"><label for='typeTEACHER'>教職員工/學生組</label>
 						</div>
 						<div class="radio radio-primary radio-inline">						
 							<input type="radio" id='typeALUMNI' name="type" value='ALUMNI'><label for='typeALUMNI'>校友組</label>
@@ -312,7 +317,7 @@
 				 
 				
 				<div class='col-md-12' style='text-align: center'>
-					<button id="registerBtn" type='submit' class='btn btn-lg btn-primary'>報名</button>
+					<button id="registerBtn" type='submit' class='btn btn-lg btn-primary'>送出報名單</button>
 				</div>
 			</form>
 		</div>

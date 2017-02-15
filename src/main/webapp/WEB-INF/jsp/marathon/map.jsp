@@ -11,11 +11,11 @@
 		<meta name="description" content="2017 台大EMBA 校園馬拉松">
 		<meta name="keywords" content="2017 台大EMBA 校園馬拉松, 校園馬拉松, 台大, 台大EMBA, 1314fun, 1314 fun, 1314 fun 開跑">
 		
-		<meta property="og:url"                content="${pageContext.request.contextPath}/marathon" />
+		<meta property="og:url"                content="http://1314fun.tw/marathon/map" />
 		<meta property="og:type"               content="article" />
 		<meta property="og:title"              content="2017 台大EMBA 校園馬拉松 - 1314 Fun 開跑 - 路線說明" />
 		<meta property="og:description"        content="路線說明" />
-		<meta property="og:image"              content="${pageContext.request.contextPath}/resources/images/1314-fun.jpg" />	
+		<meta property="og:image"              content="http://1314fun.tw/resources/images/1314-fun.jpg" />
 		
 	
 		<title>2017 台大EMBA 校園馬拉松 - 1314 Fun 開跑 - 路線說明</title>
@@ -70,10 +70,34 @@
 		<div class="container">
 			<img src='${pageContext.request.contextPath}/resources/images/1314-fun-sub.jpg' class="img-responsive">
 			<h1>路線說明</h1>
-			<h2>競賽組 3 km 路線</h2>
-			<a class='fancybox' rel='group' href='${pageContext.request.contextPath}/resources/images/map-pro-3000.png' title='競賽組 3 km 路線'><img src='${pageContext.request.contextPath}/resources/images/map-pro-3000.png' class="img-responsive"></a>
-			<h2>歡樂組 1.8 km 路線</h2>
-			<a class='fancybox' rel='group' href='${pageContext.request.contextPath}/resources/images/map-happy-1800.png' title='歡樂組 1.8 km 路線'><img src='${pageContext.request.contextPath}/resources/images/map-happy-1800.png' class="img-responsive"></a>
+			<h2>競賽組 3.05 km 路線</h2>
+			<a class='fancybox' rel='group' href='${pageContext.request.contextPath}/resources/images/map-pro-3000.jpg' title='競賽組 3.05 km 路線'><img src='${pageContext.request.contextPath}/resources/images/map-pro-3000.jpg' class="img-responsive"></a>
+			<div>
+			<pre>
+（1）起點－田徑場司令台前			（8）87m右轉-女九舍  
+（2）232m左轉-耶林大道			（9）227m應力所－左轉（楓香道）      
+（3）414m森資系				（10）89m視聽教育館－左轉
+（4）162m右轉-舟山路			（11）236m漁科所－右轉停車場        
+（5）340m左轉-生機系前停車場		（12）420m綜合體育館－左轉   
+（6）115m左轉-生機二館			（13）150m舊體育館－右轉
+（7）354m綜合教室			（14）224m司令台前－終點
+			                                 
+全程共：21.35KM (3.05KM x7) 
+			</pre>
+			</div>
+			<h2>歡樂組 1.52 km 路線</h2>
+			<a class='fancybox' rel='group' href='${pageContext.request.contextPath}/resources/images/map-happy-1800.jpg' title='歡樂組 1.52 km 路線'><img src='${pageContext.request.contextPath}/resources/images/map-happy-1800.jpg' class="img-responsive"></a>
+			<div>
+			<pre>
+（1）起點－田徑場司令台前		（5）330m綜合體育館－左轉
+（2）232m耶林大道	        （6）150m舊體育館－右轉
+（3）414m森資系(左轉)         	（7）224m司令台前－終點
+（4）326思亮館(左轉)			     
+							   					
+全程共：1.526KM 
+						
+			</pre>
+			</div>
 		</div>	
 		<br/>
 		<br/>
