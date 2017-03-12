@@ -6,5 +6,5 @@ import tw.fun1314.app.entity.MarathonTeam;
 
 public interface MarathonDao extends CrudRepository<MarathonTeam, Long> {
 
-	
+	public MarathonTeam findByTeamName(String teamName);
 }

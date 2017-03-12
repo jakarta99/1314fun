@@ -33,6 +33,23 @@
 				line-height: 1.5;
 				font-family:'Noto Sans TC', sans-serif;
 			}
+			.myIframe {
+			position: relative;
+			padding-bottom: 65.25%;
+			padding-top: 30px;
+			height: 0;
+			overflow: auto; 
+			-webkit-overflow-scrolling:touch; //<<--- THIS IS THE KEY 
+			border: solid black 1px;
+			} 
+			.myIframe iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			}
+			
 		</style>
 	</head>
 	<body>
@@ -66,8 +83,8 @@
 			<img src='${pageContext.request.contextPath}/resources/images/1314-fun-sub.jpg' class="img-responsive"/>
 			<h1>2017臺灣大學EMBA第六屆校園馬拉松接力賽競賽規程</h1>
 			<div class="col-md-12">
-				<a href='${pageContext.request.contextPath}/resources/file/2017NTUEMBA-Marathon-Rule.pdf' class='btn btn-primary btn-lg' download>競賽規則 v20170216</a>
-				<a href='${pageContext.request.contextPath}/resources/file/2017NTUEMBA-Marathon-Affidavit.pdf' class='btn btn-warning btn-lg' download>切結書 v20170213</a>
+				<a href='${pageContext.request.contextPath}/resources/file/2017NTUEMBA-Marathon-Rule.pdf?v=20170217' class='btn btn-primary btn-lg' download>競賽規則 v20170217</a>
+				<a href='${pageContext.request.contextPath}/resources/file/2017NTUEMBA-Marathon-Affidavit.pdf?v=20170213' class='btn btn-warning btn-lg' download>切結書 v20170213</a>
 			</div>
 			
 			<br/>
@@ -78,9 +95,14 @@
 				<ul>
 					<li>2017-02-13 切結書更新補充說明，請下載新版</li>
 					<li>2017-02-16 競賽規程有部分更新，請下載新版</li>
+					<li>2017-02-17 競賽規程 報名網址有部分更新，請下載新版</li>
 				</ul>
 			</div>
-		
+			<div class="col-md-12 myIframe">
+			<iframe src="https://docs.google.com/gview?url=http://1314fun.tw/resources/file/2017NTUEMBA-Marathon-Rule.pdf&embedded=true" 
+				style="width:100%; height:600px;" frameborder="0"></iframe>
+			</div>
+			
 		</div>
 		<br/>
 		<br/>

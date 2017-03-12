@@ -64,6 +64,24 @@
 		<div class="container">
 			<img src='${pageContext.request.contextPath}/resources/images/1314-fun-sub.jpg' class="img-responsive">
 			<h1>1314 FUN開跑 最新消息</h1>
+			
+			<table class='table'>
+				<tr><td nowrap>2017-03-12</td><td>
+					<ul>
+					<li>你組隊報名了嗎？</li> 
+					<li>2017校園馬拉松接力完賽禮，除了豐富學長姐贊助物資外，每人還可獲得創新設計的台大EMBA限量豪華版衣保袋(內附: 分隔鞋層及大拉鍊口袋)， 總價值超過1000元!</li> 
+					<li> 快來報名參加一生一世Fun開跑，拿精美限量衣保袋!</li>
+					</ul>
+				</td>
+				<td>
+				<img src="${pageContext.request.contextPath}/resources/images/bag.jpg" width="200" class="img-responsive">
+				</td></tr>				
+				<tr><td nowrap>2017-03-12</td><td>【緊急招募 - 小燕子篇】</td><td><iframe width="560" height="315" src="https://www.youtube.com/embed/d-2C_TBIheU" frameborder="0" allowfullscreen></iframe></td></tr>
+				<tr><td nowrap>2017-03-12</td><td>【緊急招募 - 海膽篇】</td><td><iframe width="560" height="315" src="https://www.youtube.com/embed/iwhSoVue5bs" frameborder="0" allowfullscreen></iframe></td></tr>
+				<tr><td nowrap>2017-03-12</td><td>【緊急招募 - 序篇】</td><td><iframe width="560" height="315" src="https://www.youtube.com/embed/CSxT06pki4k" frameborder="0" allowfullscreen></iframe></td></tr>
+				<tr><td nowrap>2017-03-11</td><td colspan="2">謝謝「眷屬參賽資格補充說明：眷屬可參加比賽，但參加競賽組則不計名次;  參加歡樂組因比cosplay, 可計分比賽」</td></tr>
+			</table>
+			
 		</div>	
 		<br/>
 		<br/>

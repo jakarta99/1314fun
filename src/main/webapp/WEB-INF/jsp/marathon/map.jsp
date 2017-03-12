@@ -70,8 +70,9 @@
 		<div class="container">
 			<img src='${pageContext.request.contextPath}/resources/images/1314-fun-sub.jpg' class="img-responsive">
 			<h1>路線說明</h1>
-			<h2>競賽組 3.05 km 路線</h2>
+			<h2>競賽組 3 km 路線</h2>
 			<a class='fancybox' rel='group' href='${pageContext.request.contextPath}/resources/images/map-pro-3000.jpg' title='競賽組 3.05 km 路線'><img src='${pageContext.request.contextPath}/resources/images/map-pro-3000.jpg' class="img-responsive"></a>
+			 
 			<div>
 			<pre>
 （1）起點－田徑場司令台前			（8）87m右轉-女九舍  
@@ -85,7 +86,7 @@
 全程共：21.35KM (3.05KM x7) 
 			</pre>
 			</div>
-			<h2>歡樂組 1.52 km 路線</h2>
+			<h2>歡樂組 1.5 km 路線</h2>
 			<a class='fancybox' rel='group' href='${pageContext.request.contextPath}/resources/images/map-happy-1800.jpg' title='歡樂組 1.52 km 路線'><img src='${pageContext.request.contextPath}/resources/images/map-happy-1800.jpg' class="img-responsive"></a>
 			<div>
 			<pre>

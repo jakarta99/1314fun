@@ -29,4 +29,8 @@ public class MarathonService {
 		return team;
 	}
 	
+	public MarathonTeam getByTeamName(String teamName) {
+		return marathonDao.findByTeamName(teamName);
+	}
+	
 }
