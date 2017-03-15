@@ -343,6 +343,7 @@ $(function () {
             		});
                 },
                 submitSuccess: function($form, event) {
+                	$("#registerBtn").prop('disabled', true);
                     event.preventDefault();
                     $.ajax({
                 		url:"${pageContext.request.contextPath}/marathon/register",
@@ -364,6 +365,7 @@ $(function () {
                 				    }
                 				})
                 			} else {
+                				$("#registerBtn").prop('disabled', false);
                 				swal({
                     				title: 'Oooooooooops!',
                     				type: 'error',
@@ -372,9 +374,11 @@ $(function () {
                     			    allowOutsideClick: false,
                     			    allowEscapeKey: false
                     			});
+                				
                 			}
                 		},
                 		error:function(xhr, response, text) {
+                			$("#registerBtn").prop('disabled', false);
                 			swal({
                 				title: 'Oooooooooops!',
                 				type: 'error',

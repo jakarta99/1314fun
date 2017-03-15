@@ -113,12 +113,12 @@ public class MarathonController {
 			}
 			
 			if(form.getCategory() == MarathonCategory.PRO) {
-				if(memberWCount > 3) {
-					throw new Exception("競賽組女生報名不得超過 3 人");
-				}
+//				if(memberWCount > 3) {
+//					throw new Exception("競賽組女生報名不得超過 3 人");
+//				}
 				
-				if(memberMCount > 6) {
-					throw new Exception("競賽組男生報名不得超過 6 人");
+				if(memberMCount > 7) {
+					throw new Exception("競賽組男生報名不得超過 7 人");
 				}
 			}
 			
