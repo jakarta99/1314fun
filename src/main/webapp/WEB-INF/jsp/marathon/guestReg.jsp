@@ -1,5 +1,4 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ page import="java.time.*"%>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -73,9 +72,6 @@
 			<img src='${pageContext.request.contextPath}/resources/images/1314-fun-sub.jpg' class="img-responsive">
 			<h1>報名網頁  <font color='red'>報名截止日期 3/17 17:00，請儘速報名</font></h1>
 			
-		    <%ZonedDateTime now = ZonedDateTime.now(ZoneId.of("Asia/Taipei"));%>
-			<%ZonedDateTime end = ZonedDateTime.of(2017,3,17,17,0,0,0, ZoneId.of("Asia/Taipei"));%>
-			<% if(now.isBefore(end) ) { %>     
 			<form id='registerForm' class="form-horizontal" novalidate>
 			
 				<div class="form-group">
@@ -324,10 +320,6 @@
 					<button id="registerBtn" type='submit' class='btn btn-lg btn-primary'>送出報名單</button>
 				</div>
 			</form>
-<% } else { %>
-<hr/>
-<h1 class='text-danger'>報名已經截止........</h1>
-<% } %>
 		</div>
 		<br/>
 		<br/>
@@ -355,9 +347,8 @@ $(function () {
                     event.preventDefault();
                     
                                    
-                    <% if(now.isBefore(end) ) { %>
                     $.ajax({
-                		url:"${pageContext.request.contextPath}/marathon/register",
+                		url:"${pageContext.request.contextPath}/marathon/guestReg",
                 		type:'post',
                 		data:JSON.stringify( $("#registerForm").serializeObject() ),
                 		dataType:'json',
@@ -401,7 +392,6 @@ $(function () {
                 		}
                 	});
                
-                    <% } %>
                     
                 },
                 filter: function() {

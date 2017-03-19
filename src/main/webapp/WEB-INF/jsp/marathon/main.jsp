@@ -66,6 +66,11 @@
 			<h1>1314 FUN開跑 最新消息</h1>
 			
 			<table class='table'>
+				<tr><td nowrap>2017-03-19</td><td colspan="2">技術會議：2017 年4 月12 日（星期三）下午6 時，於校總區管理學院一館104 室舉行</td></tr>
+				<tr><td nowrap>2017-03-17</td><td colspan="2">報名截止日期：2017 年3 月17 日(五)17 時前，<b>就是今天下午五點之前</b>，已經繳費尚未報名者請儘速完成報名資料填寫!!</td></tr>
+				<tr><td nowrap>2017-03-16</td><td>【緊急招募 - 最終神秘人物篇】</td><td><iframe width="560" height="315" src="https://www.youtube.com/embed/qvDUgeiDb8E" frameborder="0" allowfullscreen></iframe></td></tr>
+				<tr><td nowrap>2017-03-16</td><td colspan="2">技術會議：2017 年4 月12 日（星期三）下午6 時，於校總區管理學院一館104 室舉行</td></tr>
+				<tr><td nowrap>2017-03-15</td><td colspan="2">報名截止日期：2017 年3 月17 日(五)17 時前，<b>只剩2天</b>，已經繳費尚未報名者請儘速完成報名資料填寫!!</td></tr>
 				<tr><td nowrap>2017-03-12</td><td>
 					<ul>
 					<li>你組隊報名了嗎？</li> 
@@ -79,7 +84,7 @@
 				<tr><td nowrap>2017-03-12</td><td>【緊急招募 - 小燕子篇】</td><td><iframe width="560" height="315" src="https://www.youtube.com/embed/d-2C_TBIheU" frameborder="0" allowfullscreen></iframe></td></tr>
 				<tr><td nowrap>2017-03-12</td><td>【緊急招募 - 海膽篇】</td><td><iframe width="560" height="315" src="https://www.youtube.com/embed/iwhSoVue5bs" frameborder="0" allowfullscreen></iframe></td></tr>
 				<tr><td nowrap>2017-03-12</td><td>【緊急招募 - 序篇】</td><td><iframe width="560" height="315" src="https://www.youtube.com/embed/CSxT06pki4k" frameborder="0" allowfullscreen></iframe></td></tr>
-				<tr><td nowrap>2017-03-11</td><td colspan="2">謝謝「眷屬參賽資格補充說明：眷屬可參加比賽，但參加競賽組則不計名次;  參加歡樂組因比cosplay, 可計分比賽」</td></tr>
+				<tr><td nowrap>2017-03-11</td><td colspan="2">「眷屬參賽資格補充說明：眷屬可參加比賽，但參加競賽組則不計名次;  參加歡樂組因比cosplay, 可計分比賽」</td></tr>
 			</table>
 			
 		</div>	
@@ -97,6 +102,7 @@
 
   ga('create', 'UA-91647074-1', 'auto');
   ga('send', 'pageview');
+
 
 </script>
 </html>

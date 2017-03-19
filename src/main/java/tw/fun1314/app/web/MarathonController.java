@@ -1,5 +1,8 @@
 package tw.fun1314.app.web;
 
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
+
 import org.apache.commons.beanutils.BeanUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -65,11 +68,161 @@ public class MarathonController {
 		return "/marathon/register";
 	}
 	
+	
+	@RequestMapping(value = "/guestReg", method = RequestMethod.GET)
+	public String guestRegPage(Model model) {
+		
+		
+		
+		return "/marathon/guestReg";
+	}
+	
+	
+	@RequestMapping(value = "/adminData", method = RequestMethod.GET)
+	public String adminData(Model model) {
+		
+		model.addAttribute("teams", marathonService.getAll());
+		
+		return "/marathon/adminData";
+	}
+	
 	@RequestMapping(value = "/record", method = RequestMethod.GET)
 	public String recordPage(Model model) {
 		
 		return "/marathon/record";
 	}
+
+	@RequestMapping(value = "/guestReg", method = RequestMethod.POST,
+	        consumes = MediaType.APPLICATION_JSON_UTF8_VALUE, 
+	        produces = {MediaType.APPLICATION_ATOM_XML_VALUE, MediaType.APPLICATION_JSON_VALUE})
+	@ResponseBody
+	public AjaxResponse guestInsert(final Model model, @RequestBody MarathonTeam form) {
+		log.debug("{}", form);
+		
+		AjaxResponse ajaxResponse = new AjaxResponse();
+		
+		
+		
+		try {
+			
+			
+			// 檢查報名是否為 7-9 人
+			int memberWCount = 0;
+			int memberMCount = 0;
+			int memberCount = 0;
+			for(int i=1; i<10; i++) {
+				String memberName = BeanUtils.getProperty(form, "memberNameW"+i);
+				if(StringUtils.isNotEmpty(memberName)) {
+					memberWCount ++;
+					memberCount ++;
+				}
+			}
+			for(int i=1; i<10; i++) {
+				String memberName = BeanUtils.getProperty(form, "memberNameM"+i);
+				if(StringUtils.isNotEmpty(memberName)) {
+					memberMCount ++;
+					memberCount ++;
+				}
+			}
+			
+			if(memberCount < 7) {
+				throw new Exception("請至少輸入 7 位比賽選手資料");
+			}
+			
+			if(memberCount > 9) {
+				throw new Exception("請最多輸入 9 位比賽選手資料");
+			}
+			
+			if(form.getCategory() == MarathonCategory.PRO) {
+//				if(memberWCount > 3) {
+//					throw new Exception("競賽組女生報名不得超過 3 人");
+//				}
+				
+				if(memberMCount > 7) {
+					throw new Exception("競賽組男生報名不得超過 7 人");
+				}
+			}
+			
+			try {
+				MarathonTeam checkDuplicateTeam = marathonService.getByTeamName(form.getTeamName());
+				if(checkDuplicateTeam != null && checkDuplicateTeam.getId() > 0) {
+					throw new Exception("目前資料庫已經有相同隊名，<br/>若不是重複報名，請修改隊名。");
+				}
+			} catch(Exception ex) {
+				throw new Exception("目前資料庫已經有相同隊名，<br/>若不是重複報名，請修改隊名。");
+			}
+			
+			
+		
+			marathonService.insert(form);
+			
+			StringBuffer mailContent = new StringBuffer();
+			
+			mailContent.append("<html>");
+			mailContent.append("<body>");
+			mailContent.append("<h1>恭喜您已經成功報名 2017台大EMBA校園馬拉松 - 1314Fun開跑</h1>");
+			mailContent.append("<h3>報名資訊如下，若有任何問題，請再發信至 student@emba.ntu.edu.tw 留下您的問題、姓名及聯絡電話後，大會相關負責人會儘快與您聯繫!!</h3>");
+			mailContent.append("<table border='1'>");
+			
+			mailContent.append("<tr><td>隊名</td><td>").append(form.getTeamName()).append("</td></tr>");
+			mailContent.append("<tr><td>隊長</td><td>").append(form.getLeaderName()).append("</td></tr>");
+			mailContent.append("<tr><td>聯絡地址</td><td>").append(form.getAddress()).append("</td></tr>");
+			mailContent.append("<tr><td>聯絡電話</td><td>").append(form.getPhone()).append("</td></tr>");			
+			mailContent.append("<tr><td>聯絡Email</td><td>").append(form.getEmail()).append("</td></tr>");
+			if(MarathonCategory.PRO == form.getCategory()) {
+				mailContent.append("<tr><td>參賽項目</td><td>").append("競賽組").append("</td></tr>");
+			} else if(MarathonCategory.HAPPY == form.getCategory()) {
+				mailContent.append("<tr><td>參賽項目</td><td>").append("歡樂組").append("</td></tr>");
+			} else {
+				mailContent.append("<tr><td>參賽項目</td><td>").append("異常 *** 請洽大會").append("</td></tr>");
+			}
+			
+			if(MarathonType.TEACHER == form.getType()) {
+				mailContent.append("<tr><td>參加組別</td><td>").append("教職員工/學生組 ").append("</td></tr>");
+			} else if(MarathonType.ALUMNI == form.getType()) {
+				mailContent.append("<tr><td>參加組別</td><td>").append("校友組 ").append("</td></tr>");
+			} else if(MarathonType.GUEST == form.getType()) {
+				mailContent.append("<tr><td>參加組別</td><td>").append("來賓組 ").append("</td></tr>");
+			} else {
+				mailContent.append("<tr><td>參加組別</td><td>").append("異常 *** 請洽大會").append("</td></tr>");
+			}
+			
+			mailContent.append("<tr><td>隊員名單</td><td>");
+			for(int i=1; i<10; i++) {
+				if(StringUtils.isNotEmpty(BeanUtils.getSimpleProperty(form, "memberNameW"+i))){
+					mailContent.append(BeanUtils.getSimpleProperty(form, "memberNameW"+i) +"-"+ BeanUtils.getSimpleProperty(form, "memberClassW"+i)+"<br/>");
+				}
+			}
+			
+			for(int i=1; i<10; i++) {
+				if(StringUtils.isNotEmpty(BeanUtils.getSimpleProperty(form, "memberNameM"+i))){
+					mailContent.append(BeanUtils.getSimpleProperty(form, "memberNameM"+i) +"-"+ BeanUtils.getSimpleProperty(form, "memberClassM"+i)+"<br/>");
+				}
+			}
+			mailContent.append("</td></tr>");
+			
+			
+			mailContent.append("<tr><td>匯款帳號</td><td>").append(form.getPayAccount()).append("</td></tr>");
+			mailContent.append("<tr><td>匯款姓名</td><td>").append(form.getPayName()).append("</td></tr>");
+			mailContent.append("<tr><td>匯款金額</td><td>").append(form.getPayAmount()).append("</td></tr>");
+			
+			
+			mailContent.append("</table>");
+			mailContent.append("</body>");
+			mailContent.append("</html>");
+			
+			mailService.sendMail(mailContent.toString(), form.getEmail());
+			
+			
+			ajaxResponse.setData(form);
+		} catch (Exception e) {
+			
+			ajaxResponse.addMessage(e.getMessage());
+		}
+
+		return ajaxResponse; //response;
+	}
+	
 	
 	
 	@RequestMapping(value = "/register", method = RequestMethod.POST,
@@ -84,6 +237,13 @@ public class MarathonController {
 		
 		
 		try {
+			
+			// 檢查報名截止日期
+			 ZonedDateTime now = ZonedDateTime.now(ZoneId.of("Asia/Taipei"));
+			 ZonedDateTime end = ZonedDateTime.of(2017,3,17,17,0,0,0, ZoneId.of("Asia/Taipei"));
+			 if(now.isAfter(end) ) {
+				 throw new Exception("目前時間 "+now+" 已經超過報名截止時間...");
+			 }
 			
 			// 檢查報名是否為 7-9 人
 			int memberWCount = 0;

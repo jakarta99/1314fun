@@ -1,9 +1,11 @@
 package tw.fun1314.app.service;
 
 import java.time.LocalDateTime;
+import java.util.Collection;
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -33,4 +35,7 @@ public class MarathonService {
 		return marathonDao.findByTeamName(teamName);
 	}
 	
+	public Collection<MarathonTeam> getAll() {
+		return marathonDao.findAll(new Sort(Sort.Direction.ASC, "id"));
+	}
 }
